@@ -1,12 +1,11 @@
 {
-  "name": "project-on-bootstrap",
+  "name": "start",
   "version": "1.0.0",
   "description": "Project template using gulp",
-  "author": "itchief.ru",
+  "author": "Vladislav Lypivets",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/itchief/gulp-project-bootstrap-4.git"
+  "scripts": {
+    "dev": "gulp"
   },
   "dependencies": {
     "jquery": "3.5.0",
