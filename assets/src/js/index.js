@@ -4,5 +4,8 @@ $(document).ready(function() {
     window.print();
     return;
   });
+  $('.datepicker').Zebra_DatePicker({
+    always_visible: $('#date-picker-container')
+  });;
 
 });

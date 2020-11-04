@@ -11,7 +11,8 @@
     "bootstrap": "4.4.1",
     "jquery": "3.5.0",
     "jquery-nice-select": "^1.1.0",
-    "popper.js": "1.16.0"
+    "popper.js": "1.16.0",
+    "zebra_datepicker": "^1.9.16"
   },
   "devDependencies": {
     "browser-sync": "~2.26.7",
