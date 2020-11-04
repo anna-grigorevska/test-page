@@ -4,6 +4,9 @@
 // Импортируем Popper
 //= ../../../node_modules/popper.js/dist/umd/popper.js
 
+// Nice select
+//= ../../../node_modules/jquery-nice-select/js/jquery.nice-select.min.js
+
 // Импортируем необходимые js-файлы Bootstrap 4
 //= ../../../node_modules/bootstrap/js/dist/util.js
 //= ../../../node_modules/bootstrap/js/dist/alert.js
@@ -19,4 +22,4 @@
 //= ../../../node_modules/bootstrap/js/dist/toast.js
 
 // Импортируем другие js-файлы
-//= my.js
+//= ./index.js

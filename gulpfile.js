@@ -7,21 +7,24 @@ var path = {
         js: 'assets/build/js/',
         css: 'assets/build/css/',
         img: 'assets/build/img/',
-        fonts: 'assets/build/fonts/'
+        fonts: 'assets/build/fonts/',
+        static: 'assets/build/static'
     },
     src: {
         html: 'assets/src/*.html',
         js: 'assets/src/js/main.js',
         style: 'assets/src/style/main.scss',
         img: 'assets/src/img/**/*.*',
-        fonts: 'assets/src/fonts/**/*.*'
+        fonts: 'assets/src/fonts/**/*.*',
+        static: 'assets/src/static/**/*.*'
     },
     watch: {
         html: 'assets/src/**/*.html',
         js: 'assets/src/js/**/*.js',
         css: 'assets/src/style/**/*.scss',
         img: 'assets/src/img/**/*.*',
-        fonts: 'assets/srs/fonts/**/*.*'
+        fonts: 'assets/srs/fonts/**/*.*',
+        static: 'assets/src/static/**/*.*'
     },
     clean: './assets/build/*'
 };
@@ -102,6 +105,11 @@ gulp.task('fonts:build', function () {
         .pipe(gulp.dest(path.build.fonts));
 });
 
+gulp.task('static:build', function () {
+    return gulp.src(path.src.static)
+        .pipe(gulp.dest(path.build.static));
+});
+
 // обработка картинок
 gulp.task('image:build', function () {
     return gulp.src(path.src.img) // путь с исходниками картинок
@@ -136,7 +144,8 @@ gulp.task('build',
             'css:build',
             'js:build',
             'fonts:build',
-            'image:build'
+            'image:build',
+            'static:build'
         )
     )
 );
@@ -148,6 +157,7 @@ gulp.task('watch', function () {
     gulp.watch(path.watch.js, gulp.series('js:build'));
     gulp.watch(path.watch.img, gulp.series('image:build'));
     gulp.watch(path.watch.fonts, gulp.series('fonts:build'));
+    gulp.watch(path.watch.static, gulp.series('static:build'));
 });
 
 // задача по умолчанию

@@ -1,0 +1,165 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+a, a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+}
+
+header {
+  padding: 13px 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 5px solid $red;
+
+  .logo  img{
+    height: 59px;
+
+  }
+
+  .navigation {
+    display: flex;
+    margin-right: 100px;
+    a {
+      font-size: 18px;
+      display: block;
+      font-weight: 500;
+      margin-right: 80px;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.05);
+      }
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .tools {
+    display: flex;
+    align-items: center;
+
+    a {
+      &:first-child {
+        margin-right: 15px;
+      }
+
+      img {
+        height: 28px;
+        transition: all 0.3s;
+      }
+
+      &:hover img {
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  .lang {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+
+    img {
+      height: 28px;
+      margin-right: 13px;
+    }
+
+    .nice-select {
+      border: none;
+      padding-left: 0;
+      padding-right: 20px;
+
+      .current {
+        font-size: 18px;
+        font-weight: 500;
+        height: auto;
+        display: block;
+        width: 40px;
+      }
+    }
+  }
+}
+
+.index-main {
+  background-image: url(../img/devices.png);
+  background-repeat: no-repeat;
+  background-position-y: 85%;
+  background-position-x: 60%;
+  background-size: 50% auto;
+  padding-top: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h1 {
+    position: relative;
+    padding-left: 55px;
+    font-size: 72px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 50px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 3px;
+      width: 100px;
+      height: 2px;
+      background: $red;
+    }
+  }
+
+  h2 {
+    position: relative;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 150px;
+    line-height: 1.8;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50%;
+      width: 105px;
+      height: 2px;
+      background: $red;
+      transform: translateY(-50%);
+    }
+  }
+
+  .artwinery-wrap {
+    padding-bottom: 60px;
+    padding-left: 60px;
+  }
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  padding: 8px 50px;
+  border-top: 5px solid $red;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 18;
+  font-weight: 500;
+
+  p {
+    margin-bottom: 0;
+  }
+}
