@@ -13,18 +13,38 @@
           6
         </div>
       </div>
-      <div>
+      <div class="w-100">
         <div class="d-flex">
           <h1>
             Календар
           </h1>
         </div>
-        <input type="hidden" class="datepicker">
-        <div id="date-picker-container">
+        <div class="d-flex justify-content-center">
+          <input type="hidden" class="date-picker">
+          <div id="date-picker-container" class="date-picker-container">
+            <h2>Календарний графік</h2>
+            <div class="busy-days-wrap">
+              <div class="day">
+                12
+              </div>
+              <p class="label">
+                -   зайняті дні
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  
+  <div class="date-picker-tooltip" id="tooltip">
+    <h3>Вільні години</h3>
+    <div class="d-flex flex-wrap justify-content-between hours-wrap">
+      <span>9-10</span>
+      <span>10-11</span>
+      <span>13-14</span>
+      <span>15-16</span>
+    </div>
+  </div>
 
   </div>
 </main>
