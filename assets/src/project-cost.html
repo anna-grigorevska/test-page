@@ -101,13 +101,15 @@
             </tbody>
           </table>
         </div>
+        <div class="warning">
+          УВАГА, УСІ ЦІНИ В КОМЕРЦІЙНІЙ ПРОПОЗИЦІЇ ВКАЗАНІ БЕЗ ПДВ!!
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn-dop-uslugi" data-toggle="modal" data-target="#exampleModal">Додоткові послуги</button>
+        </div>
       </div>
     </div>
-    
   </div>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
   
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -117,31 +119,60 @@
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Додаткові послуги</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <img src="./img/close.png" alt="close">
             </button>
           </div>
           <div class="modal-body">
+            <div class="block-paragraf">
+              <div class="dop-usluga">
+                Послуга
+              </div>
+              <div class="term">
+                Терміни
+              </div>
+              <div class="price">
+                <p>
+                  Ціна
+                </p>
+              </div>
+            </div>
             <div id="accordion">
               <div class="card">
                 <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       <div class="dop-usluga">
-                        Доп.послуга
+                        Доп.послуга 1
                       </div>
                       <div class="term">
                         10-15 діб
                       </div>
                       <div class="price">
-                        5е.грн
+                        <p>
+                          5 т. грн
+                        </p>
+                        <div class="icon-block">
+                          <div class="done">
+                            <img src="./img/done.png" alt="">
+                          </div>
+                          <div class="plus">
+                            <img src="./img/plus.png" alt="plus">
+                          </div>
+                        </div>
                       </div>
                     </button>
                   </h5>
                 </div>
-            
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <p>Робота над проектом ведеться за договором на розробка, оплачується 60% передоплата.
+                      Після затвердження замовником дизайну та запуску в роботу 30%, після прийняття робіт Замовником, закривається актами та оплатою 10%.
+                      </p>
+                      <div class="list">
+                        <p>Особистий кабінет користувача (замовлення, взаєморозрахунки, календар, особиста інформація, акції)</p>
+                        <p>Керування профілем замовників</p>
+                        <p>Додаткове налаштування безпеки</p>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -149,13 +180,38 @@
                 <div class="card-header" id="headingTwo">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Collapsible Group Item #2
+                      <div class="dop-usluga">
+                        Доп.послуга 2
+                      </div>
+                      <div class="term">
+                        1-3 доби
+                      </div>
+                      <div class="price">
+                        <p>
+                          500 грн
+                        </p>
+                        <div class="icon-block">
+                          <div class="done">
+                            <img src="./img/done.png" alt="">
+                          </div>
+                          <div class="plus">
+                            <img src="./img/plus.png" alt="plus">
+                          </div>
+                        </div>
+                      </div>
                     </button>
                   </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                   <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <p>Робота над проектом ведеться за договором на розробка, оплачується 60% передоплата.
+                      Після затвердження замовником дизайну та запуску в роботу 30%, після прийняття робіт Замовником, закривається актами та оплатою 10%.
+                      </p>
+                      <div class="list">
+                        <p>Особистий кабінет користувача (замовлення, взаєморозрахунки, календар, особиста інформація, акції)</p>
+                        <p>Керування профілем замовників</p>
+                        <p>Додаткове налаштування безпеки</p>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -163,13 +219,77 @@
                 <div class="card-header" id="headingThree">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Collapsible Group Item #3
+                      <div class="dop-usluga">
+                        Доп.послуга 3
+                      </div>
+                      <div class="term">
+                        1-2 години
+                      </div>
+                      <div class="price">
+                        <p>
+                          100 грн
+                        </p>
+                        <div class="icon-block">
+                          <div class="done">
+                            <img src="./img/done.png" alt="">
+                          </div>
+                          <div class="plus">
+                            <img src="./img/plus.png" alt="plus">
+                          </div>
+                        </div>
+                      </div>
                     </button>
                   </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                   <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <p>Робота над проектом ведеться за договором на розробка, оплачується 60% передоплата.
+                      Після затвердження замовником дизайну та запуску в роботу 30%, після прийняття робіт Замовником, закривається актами та оплатою 10%.
+                      </p>
+                      <div class="list">
+                        <p>Особистий кабінет користувача (замовлення, взаєморозрахунки, календар, особиста інформація, акції)</p>
+                        <p>Керування профілем замовників</p>
+                        <p>Додаткове налаштування безпеки</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      <div class="dop-usluga">
+                        Доп.послуга 4
+                      </div>
+                      <div class="term">
+                        1-3 доби
+                      </div>
+                      <div class="price">
+                        <p>
+                          500 грн
+                        </p>
+                        <div class="icon-block">
+                          <div class="done">
+                            <img src="./img/done.png" alt="">
+                          </div>
+                          <div class="plus">
+                            <img src="./img/plus.png" alt="plus">
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                  <div class="card-body">
+                    <p>Робота над проектом ведеться за договором на розробка, оплачується 60% передоплата.
+                      Після затвердження замовником дизайну та запуску в роботу 30%, після прийняття робіт Замовником, закривається актами та оплатою 10%.
+                      </p>
+                      <div class="list">
+                        <p>Особистий кабінет користувача (замовлення, взаєморозрахунки, календар, особиста інформація, акції)</p>
+                        <p>Керування профілем замовників</p>
+                        <p>Додаткове налаштування безпеки</p>
+                      </div>
                   </div>
                 </div>
               </div>

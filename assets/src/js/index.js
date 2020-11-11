@@ -24,4 +24,22 @@ $(document).ready(function() {
     onSelect: datePickerSelect,
   });
 
+
+  $('.burger').click(function(){
+    $(this).toggleClass('open');
+    $('.menu').toggleClass('open');
+  })
+  $('.burger').click(function(){
+    $(this).toggleClass('open');
+    $('.overlley').toggleClass('d-block');
+  })
+
+  $('.btn-link').click(function(){
+    $('.plus').toggleClass('d-none');
+    
+  })
+  $('.btn-link').click(function(){
+    $('.icon-block .done').toggleClass('d-block');
+    
+  })
 });
