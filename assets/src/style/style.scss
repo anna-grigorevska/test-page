@@ -6,6 +6,11 @@ a, a:hover {
   text-decoration: none;
 }
 
+input:focus::placeholder,
+textarea:focus::placeholder {
+  opacity: 0 !important;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -398,6 +403,12 @@ header {
   .calendar-container {
     display: flex;
     flex-direction: column;
+    @media(max-width: 992px) {
+      max-width: 90%;
+    }
+    @media(max-width: 767px) {
+      max-width: 100%;
+    }
   }
 
   .flex-1 {
@@ -418,6 +429,18 @@ header {
       font-style: normal;
       letter-spacing: normal;
     }
+    @media(max-width: 992px) {
+      margin-right: 50px;
+    }
+    @media(max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .number-page-mob {
+    font-size: 67px;
+    font-weight: 700;
+    color: $red-light;
   }
 
   h1 {
@@ -429,6 +452,15 @@ header {
     letter-spacing: normal;
     position: relative;
 
+    @media(max-width: 1000px) {
+      font-size: 30px;
+    }
+
+    @media(max-width: 767px) {
+      font-size: 24px;
+      margin-left: 40px;
+    }
+
     &:before {
       position: absolute;
       content: '';
@@ -437,6 +469,12 @@ header {
       width: 15px;
       height: 15px;
       background-color: $red-light;
+
+      @media(max-width: 767px) {
+        width: 10px;
+        height: 10px;
+        bottom: 6px;
+      }
     }
 
     &:after {
@@ -447,6 +485,11 @@ header {
       width: 100vw;
       left: calc(100% + 34px);
       bottom: 11px;
+
+      @media(max-width: 767px) {
+        left: 100%;
+        bottom: 3px;
+      }
     }
   }
 
@@ -460,6 +503,13 @@ header {
     z-index: 2;
     width: 110px;
     border: 2px solid $red-light;
+    
+
+    @media(max-width: 767px) {
+      padding: 5px;
+      bottom: 40px;
+      width: 90px;
+    }
 
     h3 {
       font-size: 14px;
@@ -469,6 +519,9 @@ header {
       margin: 0;
       margin-bottom: 10px;
       color: #000;
+      @media(max-width: 767px) {
+        font-size: 12px;
+      }
     }
 
     .hours-wrap span {
@@ -479,7 +532,12 @@ header {
       font-family: 'Roboto', sans-serif;
       margin-bottom: 7px;
       color: #000;
+      @media(max-width: 767px) {
+        font-size: 12px;
+      }
     }
+
+    
   }
 
   .date-picker-container {
@@ -487,9 +545,9 @@ header {
     flex-direction: column;
     padding-bottom: 40px;
 
-    * {
-      font-family: 'Ubuntu', sans-serif;
-    }
+    // * {
+    //   font-family: 'Ubuntu', sans-serif;
+    // }
 
     h2 {
       order: 1;
@@ -521,6 +579,18 @@ header {
         color: #37353c;
         background: $grey;
         color: #fff;
+
+        
+        @media(max-width: 992px) {
+          width: 75px;
+          height: 75px;
+        }
+
+        @media(max-width: 767px) {
+          width: 44px;
+          height: 44px;
+          font-size: 12px;
+        }
       }
 
       .label {
@@ -543,6 +613,9 @@ header {
     .dp_caption {
       font-size: 16px;
       font-weight: 700px;
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
     }
 
     .Zebra_DatePicker {
@@ -552,6 +625,7 @@ header {
       background: none;
       box-shadow: none;
       border: none;
+      z-index: 10;
 
       .dp_body th, .dp_actions td {
         padding: 20px 0;
@@ -584,6 +658,15 @@ header {
         background: none;
         border-radius: 0;
 
+        @media(max-width: 992px) {
+          padding: 28px 25px;
+        }
+
+        @media(max-width: 767px) {
+          padding: 15px 9px;
+          font-size: 12px;
+        }
+
         &:hover {
           color: $red-light;
           background: none;
@@ -602,18 +685,36 @@ header {
           opacity: 0;
           transition: all 0.3s;
           border-radius: 100%;
+
+          @media(max-width: 767px) {
+            width: 27px;
+            height: 27px;
+          }
         }
 
-        &.dp_selected {
+        &.dp_hover {
           color: #fff;
-          position: relative;
+          .date-picker-tooltip {
+            display: block;
+            @media(max-width: 1100px) {
+              display: none;
+            }
+          }
 
           &:after {
             opacity: 1;
           }
+        }
 
-          .date-picker-tooltip {
-            display: block;
+        &.dp_selected {
+          position: relative;
+
+          
+          @media(max-width: 767px) {
+            &:nth-child(6) .date-picker-tooltip {
+              left: unset;
+              right: 2px;
+            }
           }
         }
 
@@ -631,6 +732,246 @@ header {
         display: none !important;
       }
     }
+  }
+
+  .modal {
+    &.show {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .modal-dialog {
+      max-width: calc(100% - 20px);
+      width: 800px;
+
+      @media(max-width: 767px) {
+        max-width: 100%;
+        margin: 0;
+      }
+    
+      .modal-content {
+        background: #f2f2f2;
+        border: none;
+        border-radius: 0;
+        padding: 15px;
+        position: relative;
+
+        @media(max-width: 767px) {
+          padding: 10px;
+        }
+
+        .modal-body {
+          padding: 20px 25px;
+          border: 1px solid #484848;
+
+          @media(max-width: 767px) {
+            padding-left: 7px;
+            padding-right: 7px;
+          }
+
+          h2 {
+            font-size: 18px;
+            font-weight: 400;
+            color: $red-light;
+            margin: 0;
+            margin-bottom: 60px;
+
+            @media(max-width: 767px) {
+              margin-bottom: 30px;
+            }
+          }
+
+          .time-pick-wrap {
+            display: flex;
+            margin-bottom: 50px;
+
+            .input-wrap {
+              width: 73px;
+
+              input {
+                display: none;
+              }
+
+              label {
+                width: 100%;
+                height: 9px;
+                position: relative;
+                border-right: 1px solid #000;
+                background: #fff;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.3s;
+                margin-bottom: 0;
+
+                .after, .before {
+                  position: absolute;
+                  font-size: 14px;
+                  top: -4px;
+                  color: #000;
+                  display: block;
+                }
+
+                .before {
+                  left: 0;
+                  transform: translateX(-50%) translateY(-100%);
+                }
+
+                .after {
+                  right: 0;
+                  transform: translateX(50%) translateY(-100%);
+                }
+              }
+              
+              &:last-child label {
+                border-right: none;
+              }
+
+              input:disabled + label {
+                background: #3b6367;
+                cursor: not-allowed;
+              }
+
+              input:checked + label {
+                background: $grey;
+              }
+            }
+
+            @media(max-width: 767px) {
+              display: none;
+            }
+          }
+
+          .help-block-wrap {
+            display: flex;
+            margin-bottom: 45px;
+
+            .help-block {
+              display: flex;
+              align-items: center;
+              margin-left: 80px;
+              
+              &:first-child {
+                margin-left: 0;
+              }
+
+              .example {
+                width: 73px;
+                height: 9px;
+                background: #fff;
+              }
+
+              &.disabled .example {
+                background: #3b6367;
+              }
+
+              p {
+                margin: 0;
+                position: relative;
+                font-size: 14px;
+                margin-left: 35px;
+                color: #000;
+
+                &::before {
+                  position: absolute;
+                  content: '—';
+                  top: 50%;
+                  left: -10px;
+                  transform: translateX(-100%) translateY(-50%);
+                }
+              }
+            }
+
+            @media(max-width: 767px) {
+              display: none;
+            }
+          }
+
+          .time-form {
+            padding: 0 50px;
+
+            @media(max-width: 767px) {
+              padding: 0;
+            }
+
+            input {
+              width: 100%;
+              height: 42px;
+              padding-left: 20px;
+              background: #fff;
+              border: 1px solid #e5e5e5;
+              font-size: 14px;
+              margin-bottom: 30px;
+              transition: all 0.3s;
+
+              &:focus {
+                border-color: $red-light;
+                outline: none;
+              }
+            }
+
+            .btn-wrap {
+              display: flex;
+              justify-content: space-between;
+              flex-wrap: wrap;
+
+              button {
+                width: calc(50% - 24px);
+                height: 44px;
+                color: #fff;
+                background: #737373;
+                border: 2px solid #737373;
+                transition: all 0.5s;
+
+                @media(max-width: 767px) {
+                  width: 100%;
+                  margin-top: 20px;
+
+                  &.submit {
+                    margin-top: 0;
+                  }
+                }
+
+                &:hover {
+                  color: #737373;
+                  background: rgba(115, 115, 115, 0);
+                }
+
+                &.submit {
+                  background: $red-light;
+                  border-color: $red-light;
+                  
+                  &:hover {
+                    background: rgba(201, 13, 13, 0);
+                    color: $red-light;
+                  }
+                }
+              }
+            }
+          }
+
+          .time {
+            width: 100%;
+            float: unset;
+            margin-bottom: 30px;
+            border-radius: 0;
+            padding-left: 20px;
+
+            .list {
+              width: 100%;
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  background: #fff;
+  &.show {
+    opacity: 0.8;
   }
 }
 

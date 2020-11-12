@@ -15,6 +15,9 @@
       </div>
       <div class="w-100">
         <div class="d-flex">
+          <div class="number-page-mob d-block d-md-none">
+            6
+          </div>
           <h1>
             Календар
           </h1>
@@ -35,7 +38,116 @@
         </div>
       </div>
     </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="calendarModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form class="modal-body">
+            <h2 class="title text-center">Оберіть часовий інтервал</h2>
+            <div class="time-pick-wrap">
+              <div class="input-wrap">
+                <input type="checkbox" id="input-9" disabled>
+                <label for="input-9">
+                  <span class="before">9:00</span>
+                  <span class="after">10:00</span>
+                </label>
+              </div>
+              <div class="input-wrap">
+                <input type="checkbox" id="input-10">
+                <label for="input-10">
+                  <span class="after">11:00</span>
+                </label>
+              </div>
+              <div class="input-wrap">
+                <input type="checkbox" id="input-11">
+                <label for="input-11">
+                  <span class="after">12:00</span>
+                </label>
+              </div>
+              <div class="input-wrap">
+                <input type="checkbox" id="input-12" disabled>
+                <label for="input-12">
+                  <span class="after">13:00</span>
+                </label>
+              </div>
+              <div class="input-wrap">
+                <input type="checkbox" id="input-13">
+                <label for="input-13">
+                  <span class="after">14:00</span>
+                </label>
+              </div>
+              <div class="input-wrap">
+                <input type="checkbox" id="input-14">
+                <label for="input-14">
+                  <span class="after">15:00</span>
+                </label>
+              </div>
+              <div class="input-wrap">
+                <input type="checkbox" id="input-15">
+                <label for="input-15">
+                  <span class="after">16:00</span>
+                </label>
+              </div>
+              <div class="input-wrap">
+                <input type="checkbox" id="input-16">
+                <label for="input-16">
+                  <span class="after">17:00</span>
+                </label>
+              </div>
+              <div class="input-wrap">
+                <input type="checkbox" id="input-17">
+                <label for="input-17">
+                  <span class="after">18:00</span>
+                </label>
+              </div>
+              <div class="input-wrap">
+                <input type="checkbox" id="input-18">
+                <label for="input-18">
+                  <span class="after">19:00</span>
+                </label>
+              </div>
+            </div>
+            <div class="help-block-wrap">
+              <div class="help-block disabled">
+                <div class="example"></div>
+                <p>зайнятий час</p>
+              </div>
+              <div class="help-block">
+                <div class="example"></div>
+                <p>вільний час</p>
+              </div>
+            </div>
+            <div class="d-block d-md-none">
+              <select class="nice-select time">
+                <option value="9">9:00-10:00</option>
+                <option value="10">10:00-11:00</option>
+                <option value="11">11:00-12:00</option>
+                <option value="12">12:00-13:00</option>
+                <option value="13">13:00-14:00</option>
+                <option value="14">14:00-15:00</option>
+                <option value="15">15:00-16:00</option>
+                <option value="16">16:00-17:00</option>
+                <option value="17">17:00-18:00</option>
+                <option value="18">18:00-19:00</option>
+              </select>
+            </div>
+            <div class="time-form">
+              <input type="text" name="name" placeholder="Ім'я Прізвище">
+              <input type="text" name="company" placeholder="Назва компанії">
+              <input type="tel" name="tel" placeholder="Телефон">
+              <input type="email" name="email" placeholder="E-mail">
+              <div class="btn-wrap">
+                <button type="submit" class="submit">Записатися</button>
+                <button type="button">Скасувати</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
+
   <div class="date-picker-tooltip" id="tooltip">
     <h3>Вільні години</h3>
     <div class="d-flex flex-wrap justify-content-between hours-wrap">
