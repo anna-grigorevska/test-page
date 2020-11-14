@@ -2139,6 +2139,17 @@ header {
         }
       }
     }
+    .modal{
+      .modal-dialog {
+        max-width: 100%;
+      }
+      .modal-content {
+        width: 100%;
+        .modal-content-inner .modal-header .close {
+          right: 7px;
+        }
+      }
+    }
   }
   @media (max-width: 767px){
     .block-funtion{
@@ -2198,6 +2209,47 @@ header {
             }
           }
         }
+      }
+    }
+    .modal{
+      .modal-content {
+        padding: 7px;
+        .modal-content-inner{
+          .modal-header .close {
+            right: 9px;
+            top: 6px;   
+          }
+          .modal-body {
+            padding: 0 10px 0;
+            .block-paragraf {
+              .dop-usluga,
+              .term,
+              .price{
+                font-size: 12px;
+                padding: 3px;
+              }
+            }
+            #accordion .card{
+              .card-header .btn-link{
+                .dop-usluga,
+                .term,
+                .price{
+                  font-size: 12px;
+                  padding: 3px;
+                }
+              } 
+              .card-body {
+                padding: 10px;
+                p,
+                .list p{
+                  font-size: 12px;
+                  margin-bottom: 10px;
+                }
+                
+              }
+            }
+          }
+        } 
       }
     }
   }
