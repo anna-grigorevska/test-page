@@ -289,6 +289,7 @@ header {
     font-weight: 700;
     margin: 0;
     margin-bottom: 50px;
+    animation-delay: 1.5s;
 
     &:before {
       position: absolute;
@@ -323,6 +324,7 @@ header {
     margin: 0;
     margin-left: 90px;
     line-height: 1.8;
+    animation-delay: 2s;
 
     &:before {
       position: absolute;
@@ -358,6 +360,7 @@ header {
 
   .artwinery-wrap {
     padding-bottom: 60px;
+    animation-delay: 2.5s;
 
     img {
       max-width: 100%;
@@ -378,6 +381,7 @@ header {
     position: absolute;
     right: 18%;
     top: 35px;
+    animation-delay: 1s;
     @media(max-width: 1200px) {
       right: 40px;
       top: 30px;

@@ -44,11 +44,12 @@ $(document).ready(function() {
     $('.overlley').toggleClass('d-block');
   });
 
-  // show/hide icons
-  $('.btn-link').click(function(){
-    $('.plus').toggleClass('d-none');
-  })
-  $('.btn-link').click(function(){
-    $('.icon-block .done').toggleClass('d-block');
+  // project cost show/hide icons
+  $('.project-cost-main .btn-link').click(function(){
+    $(this).find('.plus').toggleClass('d-none');
+    $(this).find('.icon-block .done').toggleClass('d-block');
   });
+
+  // wow init
+  new WOW().init();
 });

@@ -20,7 +20,10 @@
 //= ../../../node_modules/bootstrap/js/dist/scrollspy.js
 //= ../../../node_modules/bootstrap/js/dist/tab.js
 //= ../../../node_modules/bootstrap/js/dist/toast.js
+
+// Modules
 //= ../../../node_modules/zebra_datepicker/dist/zebra_datepicker.min.js
+//= ../../../node_modules/wowjs/dist/wow.min.js
 
 // Импортируем другие js-файлы
 //= ./index.js
