@@ -425,6 +425,7 @@ header {
     width: 100px;
     display: flex;
     justify-content: center;
+    animation-delay: 0.5s;
 
     .number {
       color: $red-light;
@@ -445,6 +446,7 @@ header {
     font-size: 67px;
     font-weight: 700;
     color: $red-light;
+    animation-delay: 0.5s;
   }
 
   h1 {
@@ -455,7 +457,7 @@ header {
     font-style: normal;
     letter-spacing: normal;
     position: relative;
-
+    animation-delay: 1s;
     @media(max-width: 1000px) {
       font-size: 30px;
     }
@@ -496,7 +498,9 @@ header {
       }
     }
   }
-
+  .date-picker-container{
+    animation-delay: 1.5s;
+  }
   .date-picker-tooltip {
     padding: 5px 15px;
     display: none;
@@ -507,6 +511,7 @@ header {
     z-index: 2;
     width: 110px;
     border: 2px solid $red-light;
+    
     
 
     @media(max-width: 767px) {
@@ -981,29 +986,10 @@ header {
 
 .content-main{
   overflow: hidden;
-
-  .h1-content{
-    margin-top: 20px;
+  .block-title{
     margin-bottom: 70px;
-    color: #000000;
-    font-size: 45px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    position: relative;
-
-    &::after{
-      position: absolute;
-      content: '';
-      height: 1px;
-      color: #000;
-      background-color: #c90d0d;
-      width: 96%;
-      right: -255px;
-      bottom: 23px;
-    }
-
-    span{
+    margin-top: 20px;
+    span.namber-page{
       color: #c90d0d;
       font-size: 95px;
       font-weight: 700;
@@ -1011,19 +997,44 @@ header {
       letter-spacing: normal;
       position: relative;
       margin-right: 80px;
-
+      animation-delay: 0.5s;
+      margin-bottom: 0;
+      line-height: 1;
       &::before{
         position: absolute;
         content: '';
-        right: -70px;
-        bottom: 29px;
+        right: -61px;
+        bottom: 23px;
         width: 15px;
         height: 15px;
         background-color: #c90d0d;
       }
     }
+    .h1-content{
+      margin-bottom: 7px;
+      line-height: 1;
+      color: #000000;
+      font-size: 45px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      position: relative;
+      animation-delay: 1s;
+      width: 100%;
+      &::after{
+        position: absolute;
+        content: '';
+        height: 1px;
+        color: #000;
+        background-color: #c90d0d;
+        width: 110%; 
+        right: -278px;
+        bottom: 23px;
+      }
+  
+      
+    }
   }
-
   .text-content{
     display: flex;
     align-items: flex-start;
@@ -1041,6 +1052,11 @@ header {
         font-style: normal;
         letter-spacing: normal;
         transition: all 0.3s;
+        @for $i from 1 through 48 {
+          &:nth-child(#{$i}) {
+            animation-delay: #{1.5 + $i * 0.2}s;
+          }
+        }
         &:hover{
           color: $red;
         }
@@ -1056,21 +1072,24 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation-delay: 0.5s;
   }
   @media (max-width: 1199px){
-    .h1-content{
-      font-size: 30px;
-      span{
+    .block-title{
+      .h1-content{
+        font-size: 30px;
+        &::after{
+          right: -185px;
+          bottom: 16px;
+        }
+      }
+      span.namber-page{
         font-size: 70px;
         margin-right: 60px;
         &::before{
-          bottom: 22px;
-          left: 75px;
+          bottom: 16px;
+          left: 71px;
         }
-      }
-      &::after{
-        right: -187px;
-        bottom: 20px;
       }
     }
     .text-content{
@@ -1083,21 +1102,22 @@ header {
     }
   }
   @media (max-width: 767px){
-    .h1-content{
-      font-size: 24px;
+    .block-title{
       margin-bottom: 40px;
-      span{
+      .h1-content{
+        font-size: 24px;
+        &::after{
+          right: -110px;
+          bottom: 12px;
+        }
+      }
+      span.namber-page{
         font-size: 67px;
         margin-right: 45px;
         &::before{
-          width: 11px;
-          height: 11px;
-          left: 66px;
+          bottom: 12px;
+          left: 56px;
         }
-      }
-      &::after{
-        right: -159px;
-        bottom: 18px;
       }
     }
     .text-content{
@@ -1126,6 +1146,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    animation-delay: 0.5s;
     .number{
       color: #c90d0d;
       font-size: 95px;
@@ -1138,6 +1159,7 @@ header {
     width: 100%;
     padding-bottom: 50px;
     h1{
+      animation-delay: 1.3s;
       margin: 50px 0 40px 50px;
       font-size: 45px;
       font-weight: 400;
@@ -1180,6 +1202,7 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        animation-delay: 2s;
         .point{
           font-size: 18px;
           font-weight: 500;
@@ -1204,6 +1227,7 @@ header {
       align-items: center;
       justify-content: center;
       margin-top: 20px;
+      animation-delay: 0.5s;
     }
     .opportunities-benefits{
       display: flex;
@@ -1219,6 +1243,7 @@ header {
         letter-spacing: normal;
         margin-bottom: 50px;
         text-align: center;
+        animation-delay: 2.5s;
       }
       .block-width{
         width: 900px;
@@ -1234,6 +1259,7 @@ header {
           font-weight: 400;
           font-style: normal;
           letter-spacing: normal;
+          animation-delay: 3s;
           img{
             margin-right: 20px;
           }
@@ -1345,6 +1371,7 @@ header {
         font-weight: 700;
         font-style: normal;
         letter-spacing: normal;
+        animation-delay: 0.5s;
       }
       h1{
         font-size: 24px;
@@ -1374,10 +1401,14 @@ header {
       .monitor-mobail,
       .teams-mobail{
         margin-top: 10px;
+        animation-delay: 1.7s;
         img{
           width: 45px;
           height: 39px;
         }
+      }
+      .monitor-mobail{
+        animation-delay: 2.5s;
       }
       .opportunities-benefits{
         .name-block{
@@ -1414,6 +1445,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    animation-delay: 0.5s;
     .number{
       color: #c90d0d;
       font-size: 95px;
@@ -1432,6 +1464,7 @@ header {
       font-style: normal;
       letter-spacing: normal;
       position: relative;
+      animation-delay: 1s;
       font-family: 'Arimo', sans-serif;
       span{
         font-weight: 700;
@@ -1460,6 +1493,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
+      animation-delay: 1.5s;
       .table.table-striped{
         max-width: 848px;
         border-radius: 10px;
@@ -1605,6 +1639,7 @@ header {
         font-weight: 700;
         font-style: normal;
         letter-spacing: normal;
+        animation-delay: 0.5s;
       }
       h1{
         font-size: 24px;
@@ -1655,6 +1690,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    animation-delay: 0.5s;
     .number{
       color: #c90d0d;
       font-size: 95px;
@@ -1673,9 +1709,13 @@ header {
     margin-top: 25px;
     border: 1px solid #c90d0d;
     transition: all 0.3s;
+    animation-delay: 2.4s;
     &:hover{
       background-color: white;
       color: #c90d0d;
+    }
+    &:focus{
+      outline: none;
     }
   }
 
@@ -1689,6 +1729,7 @@ header {
       font-style: normal;
       letter-spacing: normal;
       position: relative;
+      animation-delay: 1s;
       span{
         font-weight: 700;
       }
@@ -1714,6 +1755,7 @@ header {
     }
     .block-text{
       margin-left: 50px;
+      animation-delay: 1.5s;
       h4{
         font-size: 24px;
         font-weight: 700;
@@ -1735,6 +1777,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
+      animation-delay: 2s;
       .table.table-striped{
         max-width: 848px;
         border-radius: 10px;
@@ -1813,6 +1856,7 @@ header {
       }
     }
     .warning{
+      animation-delay: 2.2s;
       font-size: 16px;
       color: #c90d0d;
       font-weight: 400;
@@ -1823,6 +1867,9 @@ header {
   .modal{
     padding: 0;
     transform: translateY(20%);
+    .modal-dialog {
+      max-width: 805px;
+    }
     .modal-content {
       width: 805px;
       background-color: #f2f2f2;
@@ -2105,6 +2152,7 @@ header {
         font-weight: 700;
         font-style: normal;
         letter-spacing: normal;
+        animation-delay: 0.5s;
       }
       h1{
         font-size: 24px;
@@ -2164,6 +2212,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    animation-delay: 0.5s;
     .number{
       color: #c90d0d;
       font-size: 95px;
@@ -2194,6 +2243,7 @@ header {
       font-style: normal;
       letter-spacing: normal;
       position: relative;
+      animation-delay: 1s;
       span{
         font-weight: 700;
       }
@@ -2239,6 +2289,11 @@ header {
         }
         &:hover{
           transform: scale(1.07);
+        }
+        @for $i from 1 through 48 {
+          &:nth-child(#{$i}) {
+            animation-delay: #{1.5 + $i * 0.2}s;
+          }
         }
       }
     }
@@ -2295,6 +2350,7 @@ header {
     .info-clients{
       padding-bottom: 10px;
       .number-page-mob{
+        animation-delay: 0.5s;
         color: #FFF;
         font-size: 67px;
         font-weight: 700;
@@ -2340,6 +2396,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    animation-delay: 0.5s;
     .number{
       color: #c90d0d;
       font-size: 95px;
@@ -2367,6 +2424,7 @@ header {
     width: 100%;
     padding-bottom: 60px;
     h1{
+      animation-delay: 1s;
       margin: 50px 0 40px 50px;
       font-size: 45px;
       font-weight: 400;
@@ -2403,6 +2461,7 @@ header {
         font-weight: 700;
         color: #c90d0d;
         margin-bottom: 30px;
+        animation-delay: 1.5s;
       }
       .adress{
         color: #000000;
@@ -2411,6 +2470,7 @@ header {
         font-style: normal;
         letter-spacing: normal;
         margin-bottom: 30px;
+        animation-delay: 1.5s;
       }
       p{
         color: #000000;
@@ -2420,12 +2480,23 @@ header {
         letter-spacing: normal;
         line-height: 30px;
         margin-bottom: 30px;
+        animation-delay: 1.5s;
+      }
+      .group-animation-2{
+        animation-delay: 2s;
+      }
+      .group-animation-3{
+        animation-delay: 2.5s;
+      }
+      .group-animation-4{
+        animation-delay: 3s;
       }
       .direction{
         font-size: 15px;
         color: #000000;
         font-weight: 700;
         margin-bottom: 10px;
+        animation-delay: 2.5s;
       }
       .list-direction{
         width: 35%;
@@ -2453,6 +2524,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        animation-delay: 3s;
         .contacts{
           width: 30%;
           display: flex;
@@ -2580,6 +2652,7 @@ header {
     .info-company{
       padding-bottom: 10px;
       .number-page-mob{
+        animation-delay: 0.5s;
         color: #c90d0d;
         font-size: 67px;
         font-weight: 700;
@@ -2598,6 +2671,15 @@ header {
         }
       }
       .block-text{
+        .img-animation-1{
+          animation-delay: 1.5s;
+        }
+        .img-animation-2{
+          animation-delay: 2s;
+        }
+        .img-animation-3{
+          animation-delay: 2.5s;
+        }
         margin-left: 0;
         .mob-img{
           margin-bottom: 10px;
