@@ -30,76 +30,376 @@
           <p>Нижче зазначена вартість етапів та вказаний перелік робіт.</p>
         </div>
         <div class="block-table">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Найменування</th>
-                <th scope="col">Терміни <br />Раб. /дні *</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Складання ТЗ, розробка архітектури</th>
-                <td>14</td>
-              </tr>
-              <tr>
-                <th scope="row">Проектування прототипу сторінок UX \ UI + прототипування</th>
-                <td>8</td>
-              </tr>
-              <tr>
-                <th scope="row">Узгодження прототипу + правки</th>
-                <td>5</td>
-              </tr>
-              <tr>
-                <th scope="row">Розробка концепції дизайну, дизайн головної</th>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">Дизайн всіх сторінок</th>
-                <td>20</td>
-              </tr>
-              <tr>
-                <th scope="row">Узгодження дизайну головної</th>
-                <td>15</td>
-              </tr>
-              <tr>
-                <th scope="row">Узгодження дизайну всіх сторінок + правки</th>
-                <td>10</td>
-              </tr>
-              <tr>
-                <th scope="row">Верстка десктопной версії</th>
-                <td>20</td>
-              </tr>
-              <tr>
-                <th scope="row">Підключення верстки до CMS</th>
-                <td>30</td>
-              </tr>
-              <tr>
-                <th scope="row">Верстка мобільної версії</th>
-                <td>5</td>
-              </tr>
-              <tr>
-                <th scope="row">Наповнення готовим контентом</th>
-                <td>4</td>
-              </tr>
-              <tr>
-                <th scope="row">Разом фактичний час розробки сайту, не більше</th>
-                <td class="bg-red" >65</td>
-              </tr>
-              <tr>
-                <th scope="row">Тестуваня, правки</th>
-                <td class="bg-red" >14</td>
-              </tr>
-              <tr>
-                <th scope="row">Орієнтовний час узгодження етапів з замовником</th>
-                <td class="bg-red">16</td>
-              </tr>
-              <tr>
-                <th class="bg-red" scope="row">Додаткові послуги, не більше</th>
-                <td class="bg-red">10</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="block-table-wrap">
+            <div class="d-flex justify-content-end w-100">
+              <button class="more">
+                <span>Докладніше</span>
+                <span class="d-none">Згорнути</span>
+              </button>
+            </div>
+            <div class="table">
+              <div class="table-head">
+                <div class="table-row">
+                  <div class="left">Верстка сайту</div>
+                  <div class="right">Ціна без ПДВ</div>
+                </div>
+              </div>
+              <div class="table-body">
+                <div class="table-row">
+                  <div class="left">
+                    Програмування, розробка
+                  </div>
+                  <div class="right">
+                    грн
+                  </div>
+                  <div class="hidden">
+                    <div class="left mt-2 mb-2">
+                      <h2>Адаптивність:</h2>
+                    </div>
+                    <div class="right mt-2 mb-2"></div>
+                    <div class="left pb-1">
+                      <p>Верстка для всіх типів розмірів комп'ютерних екранів, "гумова верстка"</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left">
+                      <p>Верстка під мобільні телефони та планшети</p>
+                    </div>
+                    <div class="right">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left mt-2 mb-2">
+                      <h2>Кроссбраузерність:</h2>
+                    </div>
+                    <div class="right mt-2 mb-2">грн</div>
+                    <div class="left">
+                      <p>Стабільна робота в усіх браузерах, випущених після 2018 року</p>
+                    </div>
+                    <div class="right">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left mt-2 mb-2">
+                      <h2>Адаптивність:</h2>
+                    </div>
+                    <div class="right mt-2 mb-2"></div>
+                    <div class="left pb-1">
+                      <p>Тестування на всіх типах браузерів (актуальні версії)</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Тестування на реальних пристроях</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Тестування адаптивності (45 розширень екранів)</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    Програмування, розробка
+                  </div>
+                  <div class="right">
+                    грн
+                  </div>
+                  <div class="hidden">
+                    <div class="left pb-1">
+                      <p>Натяжка верстки на CMS ModX</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Підготовка панелі управління сторінками</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    Базовий функціонал (1 рівень)
+                  </div>
+                  <div class="right">
+                    грн
+                  </div>
+                  <div class="hidden">
+                    <div class="left pb-1">
+                      <p>Управління контентом</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Багатомовність</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Каталог продукції</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Прес-центр (новини)</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Модуль автоналаштування SEO</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Система управління банерів</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Платіжні системи</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Кошик</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Оформлення (без реєстрації)</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    Програмування, розробка
+                  </div>
+                  <div class="right">
+                    грн
+                  </div>
+                  <div class="hidden">
+                    <div class="left pb-1">
+                      <p>Натяжка верстки на CMS ModX</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Підготовка панелі управління сторінками</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    Програмування, розробка
+                  </div>
+                  <div class="right">
+                    грн
+                  </div>
+                  <div class="hidden">
+                    <div class="left pb-1">
+                      <p>Натяжка верстки на CMS ModX</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Підготовка панелі управління сторінками</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    Програмування, розробка
+                  </div>
+                  <div class="right">
+                    грн
+                  </div>
+                  <div class="hidden">
+                    <div class="left pb-1">
+                      <p>Натяжка верстки на CMS ModX</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Підготовка панелі управління сторінками</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    Програмування, розробка
+                  </div>
+                  <div class="right">
+                    грн
+                  </div>
+                  <div class="hidden">
+                    <div class="left pb-1">
+                      <p>Натяжка верстки на CMS ModX</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Підготовка панелі управління сторінками</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    Програмування, розробка
+                  </div>
+                  <div class="right">
+                    грн
+                  </div>
+                  <div class="hidden">
+                    <div class="left pb-1">
+                      <p>Натяжка верстки на CMS ModX</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Підготовка панелі управління сторінками</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    Програмування, розробка
+                  </div>
+                  <div class="right">
+                    грн
+                  </div>
+                  <div class="hidden">
+                    <div class="left pb-1">
+                      <p>Натяжка верстки на CMS ModX</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Підготовка панелі управління сторінками</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    Програмування, розробка
+                  </div>
+                  <div class="right">
+                    грн
+                  </div>
+                  <div class="hidden">
+                    <div class="left pb-1">
+                      <p>Натяжка верстки на CMS ModX</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                    <div class="left pb-1">
+                      <p>Підготовка панелі управління сторінками</p>
+                    </div>
+                    <div class="right pb-1">
+                      <span class="d-block">грн</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table table-small">
+              <div class="table-head">
+                <div class="table-row">
+                  <div class="left">Найменування</div>
+                  <div class="right">Ціна без ПДВ</div>
+                </div>
+              </div>
+              <div class="table-body">
+                <div class="table-row">
+                  <div class="left">
+                    <h2>Додатковий функціонал (2 рівень):</h2>
+                  </div>
+                  <div class="right">грн</div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    <p>Особистий кабінет користувача (замовлення, взаєморозрахунки, календар, особиста інформація, акції)</p>
+                  </div>
+                  <div class="right"><span>грн</span></div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    <p>Керування профілем замовників</p>
+                  </div>
+                  <div class="right"><span>грн</span></div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    <p>Промокоди</p>
+                  </div>
+                  <div class="right"><span>грн</span></div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    <p>Акції (групи користувачів)</p>
+                  </div>
+                  <div class="right"><span>грн</span></div>
+                </div>
+                <div class="table-row">
+                  <div class="left">
+                    <p>Індивідуальна знижка</p>
+                  </div>
+                  <div class="right"><span>грн</span></div>
+                </div>
+              </div>
+              <div class="table-footer">
+                <div class="table-row">
+                  <div class="left">
+                    РАЗОМ БЕЗ ПДВ
+                  </div>
+                  <div class="right">грн</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="warning">
           УВАГА, УСІ ЦІНИ В КОМЕРЦІЙНІЙ ПРОПОЗИЦІЇ ВКАЗАНІ БЕЗ ПДВ!!

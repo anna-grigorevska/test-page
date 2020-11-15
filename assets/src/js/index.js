@@ -52,4 +52,11 @@ $(document).ready(function() {
 
   // wow init
   new WOW().init();
+
+  // project-cost more button handler
+  $('button.more').click(function(){
+    $(this).toggleClass('rotate');
+    $(this).find('span').toggleClass('d-none');
+    $('.table .hidden').toggleClass('open');
+  })
 });
