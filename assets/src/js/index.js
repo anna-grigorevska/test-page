@@ -31,7 +31,7 @@ $(document).ready(function() {
 
   // openModal
   function openModal() {
-    $("#calendarModal").modal()
+    $("#calendarModal").modal();
   }
 
   // mobile navigation
@@ -58,5 +58,11 @@ $(document).ready(function() {
     $(this).toggleClass('rotate');
     $(this).find('span').toggleClass('d-none');
     $('.table .hidden').toggleClass('open');
-  })
+  });
+
+  // project-cost additional functionality
+  $('#additional-functionality-add').click(function(){
+    $('.additional-functionality').removeClass('d-none');
+    $('#additionalFunctional').modal('toggle');
+  });
 });
