@@ -113,16 +113,6 @@ gulp.task('static:build', function () {
 // обработка картинок
 gulp.task('image:build', function () {
     return gulp.src(path.src.img) // путь с исходниками картинок
-        .pipe(cache(imagemin([ // сжатие изображений
-            imagemin.gifsicle({ interlaced: true }),
-            jpegrecompress({
-                progressive: true,
-                max: 90,
-                min: 80
-            }),
-            pngquant(),
-            imagemin.svgo({ plugins: [{ removeViewBox: false }] })
-        ])))
         .pipe(gulp.dest(path.build.img)); // выгрузка готовых файлов
 });
 

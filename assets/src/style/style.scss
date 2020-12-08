@@ -39,8 +39,11 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    .logo  img{
-      height: 59px;
+    .logo{
+      flex: 1;
+      img{
+        height: 59px;
+      }
     }
   
     .navigation {
@@ -455,13 +458,15 @@ header {
 
   h1 {
     font-family: 'Arimo', sans-serif;
-    margin: 50px 0 40px 50px;
+    margin: 66px 0 40px 50px;
     font-size: 45px;
     font-weight: 700;
     font-style: normal;
     letter-spacing: normal;
     position: relative;
     animation-delay: 1s;
+    text-transform: uppercase;
+    line-height: 1;
     @media(max-width: 1000px) {
       font-size: 30px;
     }
@@ -475,7 +480,7 @@ header {
       position: absolute;
       content: '';
       left: -29px;
-      bottom: 21px;
+      bottom: 6px;
       width: 15px;
       height: 15px;
       background-color: $red-light;
@@ -563,6 +568,7 @@ header {
     // }
 
     h2 {
+      text-align: center;
       order: 1;
       width: 100%;
       font-size: 23px;
@@ -1043,7 +1049,7 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-
+    padding-left: 25px;
     .block-content{
       border-left: 2px solid #c90d0d;
       padding-left: 20px;
@@ -1056,6 +1062,11 @@ header {
         font-style: normal;
         letter-spacing: normal;
         transition: all 0.3s;
+        line-height: 1;
+        &:last-child{
+          margin-bottom: 0;
+          
+        }
         @for $i from 1 through 48 {
           &:nth-child(#{$i}) {
             animation-delay: #{1.5 + $i * 0.2}s;
@@ -1084,7 +1095,7 @@ header {
         font-size: 30px;
         &::after{
           right: -185px;
-          bottom: 16px;
+          bottom: 6px;
         }
       }
       span.namber-page{
@@ -1097,10 +1108,14 @@ header {
       }
     }
     .text-content{
+      padding: 0;
       flex-direction: column;
       .block-content{
         .point-content{
           font-size: 22px;
+          &:last-child{
+            margin-bottom: 20px;
+          }
         }
       }
     }
@@ -1159,12 +1174,19 @@ header {
       letter-spacing: normal;
     }
   }
+  .teams{
+    margin-top: 30px;
+  }
+  .monitor{
+    margin-bottom: 160px;
+  }
   .info-development{
     width: 100%;
     padding-bottom: 50px;
     h1{
+      line-height: 1;
       animation-delay: 1.3s;
-      margin: 50px 0 40px 50px;
+      margin: 65px 0 40px 50px;
       font-size: 45px;
       font-weight: 400;
       font-style: normal;
@@ -1197,10 +1219,11 @@ header {
     .team-list{
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      padding: 0 152px;
       .list{
-        width: 315px;
-        height: 164px;
+        width: 335px;
+        height: 175px;
         background-color: #f2f2f2;
         padding-left: 45px;
         display: flex;
@@ -1303,6 +1326,7 @@ header {
         }
       }
       .team-list{
+        padding: 0px 128px;
         .list{
           width: 236px;
           height: 123px;
@@ -1339,6 +1363,9 @@ header {
       }
     }
     .info-development{
+      .team-list {
+        padding: 0 36px;
+      }
       .img-work-teams{
         img{
           width: 500px;
@@ -1388,6 +1415,7 @@ header {
         }
       }
       .team-list {
+        padding: 0;
         flex-direction: column;
         .list {
           width: calc(100% + 30px);
@@ -1462,7 +1490,8 @@ header {
     width: 100%;
     padding-bottom: 50px;
     h1{
-      margin: 50px 0 40px 50px;
+      line-height: 1;
+      margin: 66px 0 40px 50px;
       font-size: 45px;
       font-weight: 400;
       font-style: normal;
@@ -1487,7 +1516,7 @@ header {
         position: absolute;
         content: '';
         left: -29px;
-        bottom: 21px;    
+        bottom: 7px;    
         width: 15px;
         height: 15px;
         background-color: #c90d0d;
@@ -1499,6 +1528,7 @@ header {
       justify-content: center;
       animation-delay: 1.5s;
       .table.table-striped{
+        margin-left: 59px;
         max-width: 848px;
         border-radius: 10px;
         box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.1);
@@ -1603,6 +1633,7 @@ header {
       .block-table{
         .table.table-striped{
           max-width: 650px;
+          margin-left: 0;
           thead{
             tr th{
               font-size: 18px;
@@ -1807,28 +1838,28 @@ header {
         position: relative;
         margin-right: 20px;
         transition: all .3s;
-
-        &:hover {
-          color: #000;
-          border-color: #000;
-        }
-
-        &:before {
+        
+        i{
           position: absolute;
           right: -15px;
-          top: 50%;
+          top: 29%;
           width: 9px;
           height: 5px;
           display: block;
-          content: '';
-          background-image: url(../img/icon/arrow-bottom.png);
           background-size: contain;
-          transform: rotate(180deg) translateY(0%);
+          transform: rotate(0) translateY(-50%);
           transition: all 0.3s;
         }
-
-        &.rotate:before {
-          transform: rotate(0) translateY(-50%);
+        &:hover {
+          color: #000;
+          border-color: #000;
+          i{
+            color: #000;
+          }
+        }
+        &.rotate i {
+          transform: rotate(180deg) translateY(0%);
+          
         }
       }
 
@@ -2132,6 +2163,16 @@ header {
                 .dop-usluga{
                   width: 35%;
                   text-align: left;
+                  p{
+                    border-bottom: 1px dashed #000000;
+                    font-size: 18px;
+                    color: #000000;
+                    font-weight: 400;
+                    display: flex;
+                    align-items: center;
+                    line-height: 1;
+                    padding-top: 8px;
+                  }
                 }
                 .term{
                   color: #636363;
@@ -2452,8 +2493,9 @@ header {
       height: 100%;
     }
     h1{
+      line-height: 1;
       color: #fff;
-      margin: 50px 0 40px 50px;
+      margin: 66px 0 40px 50px;
       font-size: 45px;
       font-weight: 400;
       font-style: normal;
@@ -2477,7 +2519,7 @@ header {
         position: absolute;
         content: '';
         left: -29px;
-        bottom: 21px;    
+        bottom: 6px;    
         width: 15px;
         height: 15px;
         background-color: #c90d0d;
@@ -2627,10 +2669,14 @@ header {
         max-width: 90px;
       }
     }
-    .structure,
     .idea{
-      margin-top: 90px;
-      margin-bottom: 50px;
+      margin-top: 175px;
+      img{
+        max-width: 90px;
+      }
+    }
+    .structure{
+      margin-top: 116px;
       img{
         max-width: 90px;
       }
@@ -2640,8 +2686,9 @@ header {
     width: 100%;
     padding-bottom: 60px;
     h1{
+      line-height: 1;
       animation-delay: 1s;
-      margin: 50px 0 40px 50px;
+      margin: 66px 0 40px 50px;
       font-size: 45px;
       font-weight: 400;
       font-style: normal;
@@ -2664,7 +2711,7 @@ header {
         position: absolute;
         content: '';
         left: -29px;
-        bottom: 21px;    
+        bottom: 6px;    
         width: 15px;
         height: 15px;
         background-color: #c90d0d;
